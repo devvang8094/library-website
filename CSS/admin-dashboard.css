@@ -1,0 +1,103 @@
+body {
+  background-color: #fbcba5; /* match home page theme */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+.navbar-custom {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.navbar-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+}
+.navbar-brand {
+  font-weight: 600;
+  color: #000 !important;
+}
+.navbar-nav .nav-link {
+  color: #000 !important;
+  font-weight: 500;
+  border-radius: 10px;
+  padding: 6px 15px;
+  transition: all 0.3s ease-in-out;
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  background-color: #d9534f;
+  color: #fff !important;
+}
+.navbar-nav .home-btn {
+  background-color: #d9534f;
+  color: #fff !important;
+  border-radius: 10px;
+  padding: 6px 15px;
+}
+.navbar-nav .home-btn:hover {
+  background-color: #c9302c;
+}
+
+/* Dashboard */
+.dashboard-header {
+  text-align: center;
+  color: #000;
+  margin: 2rem 0;
+  font-weight: 600;
+}
+
+/* Cards */
+.card-dashboard {
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  text-align: center;
+  padding: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+.card-dashboard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Action Cards */
+.action-card {
+  background-color: #d9534f;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  transition: 0.3s;
+}
+.action-card:hover {
+  background-color: #c9302c;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* View button */
+.view-btn {
+  background-color: #d9534f;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+.view-btn:hover {
+  background-color: #c9302c;
+}
+
+/* Toast */
+.toast {
+  border-radius: 12px;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}

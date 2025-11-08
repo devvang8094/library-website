@@ -1,0 +1,41 @@
+body {
+  background: #fbceb1;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Admin Login Form */
+.admin-login-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Eye icon inside password field */
+.password-toggle-icon {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #6c757d;
+  font-size: 1.1rem;
+  user-select: none;
+}
+
+.password-toggle-icon:hover {
+  color: #000;
+}
+
+/* Adds right padding for eye icon */
+.form-control.pe-5 {
+  padding-right: 2.5rem !important;
+}
+
+/* Toast adjustments */
+.toast {
+  font-size: 0.9rem;
+  border-radius: 0.5rem;
+}

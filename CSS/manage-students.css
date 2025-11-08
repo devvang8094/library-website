@@ -1,0 +1,226 @@
+/* ---------------------------
+   Global Styles
+--------------------------- */
+body {
+  background-color: #fbcba5;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---------------------------
+   Navbar
+--------------------------- */
+.navbar-custom {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.navbar-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+}
+.navbar-brand {
+  font-weight: 600;
+  color: #000 !important;
+}
+.navbar-nav .nav-link {
+  color: #000 !important;
+  font-weight: 500;
+  border-radius: 10px;
+  padding: 6px 15px;
+  transition: all 0.3s;
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  background-color: #d9534f;
+  color: #fff !important;
+}
+
+/* ---------------------------
+   Main Container
+--------------------------- */
+.table-container {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  margin-top: 2rem;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Page Title */
+.page-title {
+  color: #d9534f;
+  font-weight: 700;
+}
+
+/* Back to Dashboard */
+#backToDashboard {
+  border-color: #d9534f;
+  color: #d9534f;
+  transition: 0.3s;
+}
+#backToDashboard:hover {
+  background-color: #d9534f;
+  color: #fff;
+  box-shadow: 0 3px 8px rgba(217, 83, 79, 0.3);
+}
+
+/* ---------------------------
+   Table Styles
+--------------------------- */
+.table th {
+  background-color: #d9534f !important;
+  color: #fff;
+  text-align: center;
+  font-size: 0.95rem;
+}
+.table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* ---------------------------
+   Search Box
+--------------------------- */
+.search-box input {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 0.6rem 1rem;
+  width: 250px;
+  transition: 0.3s;
+}
+.search-box input:focus {
+  outline: none;
+  box-shadow: 0 0 6px rgba(217, 83, 79, 0.5);
+  border-color: #d9534f;
+}
+
+/* ---------------------------
+   Mobile Student Cards
+--------------------------- */
+.student-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.student-card:hover {
+  transform: translateY(-4px);
+}
+.student-name {
+  font-weight: 700;
+  color: #d9534f;
+  font-size: 1.1rem;
+}
+.student-detail {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 4px;
+}
+
+/* ---------------------------
+   Card Status Colors
+--------------------------- */
+.card-active {
+  border: 1px solid #198754;
+  box-shadow: 0 0 10px rgba(25, 135, 84, 0.2);
+}
+.card-warning {
+  border: 1px solid #ffc107;
+  box-shadow: 0 0 10px rgba(255, 193, 7, 0.3);
+}
+.card-expired {
+  border: 1px solid #d9534f;
+  box-shadow: 0 0 10px rgba(217, 83, 79, 0.3);
+}
+
+/* ---------------------------
+   Action Buttons
+--------------------------- */
+.action-btn {
+  border: none;
+  padding: 5px 12px;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  margin: 2px;
+  color: #fff;
+  transition: all 0.3s;
+}
+.btn-update {
+  background-color: #0d6efd;
+}
+.btn-update:hover {
+  background-color: #0b5ed7;
+}
+.btn-delete {
+  background-color: #d9534f;
+}
+.btn-delete:hover {
+  background-color: #bb2d3b;
+}
+
+/* ---------------------------
+   Delete Modal
+--------------------------- */
+.modal-content {
+  border-radius: 20px;
+  background-color: #fff8f8;
+}
+.modal-icon {
+  width: 60px;
+  opacity: 0.8;
+}
+.modal-footer button {
+  font-weight: 600;
+}
+
+/* ---------------------------
+   Responsive Design
+--------------------------- */
+@media (max-width: 768px) {
+  .table {
+    display: none;
+  }
+  #studentCards {
+    display: block !important;
+  }
+}
+#studentCards {
+  display: none;
+}
+
+/* ---------------------------
+   Animation
+--------------------------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Notify buttons */
+.btn-notify {
+  background-color: #198754;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 5px 12px;
+  font-size: 0.85rem;
+  transition: 0.3s;
+}
+.btn-notify:hover {
+  background-color: #157347;
+}
+
+/* Notify All button hover effect */
+#notifyAllBtn:hover {
+  box-shadow: 0 3px 8px rgba(25, 135, 84, 0.3);
+}

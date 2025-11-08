@@ -1,0 +1,139 @@
+/* === GLOBAL THEME === */
+body {
+  background-color: #fbcba5;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* === NAVBAR === */
+.navbar-custom {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-logo {
+  width: 42px;
+  height: 42px;
+  margin-right: 10px;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  color: #000 !important;
+  font-size: 1.15rem;
+  letter-spacing: 0.5px;
+}
+
+.navbar-nav .nav-link {
+  color: #000 !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #d9534f !important;
+}
+
+.navbar-nav .nav-link.active {
+  color: #d9534f !important;
+  font-weight: 600;
+}
+
+/* === MAIN CARD === */
+.update-student-card {
+  max-width: 700px;
+  margin: 4rem auto;
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.update-student-card:hover {
+  box-shadow: 0 8px 25px rgba(217, 83, 79, 0.4);
+}
+
+/* === FORM ELEMENTS === */
+label.form-label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+input.form-control,
+select.form-select {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.95rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input.form-control:focus,
+select.form-select:focus {
+  outline: none;
+  border-color: #d9534f;
+  box-shadow: 0 0 6px rgba(217, 83, 79, 0.5);
+}
+
+/* === BUTTONS === */
+.btn-danger {
+  background-color: #d9534f;
+  border: none;
+  border-radius: 10px;
+  padding: 0.6rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: #b52f2a;
+  box-shadow: 0 0 10px rgba(217, 83, 79, 0.5);
+}
+
+.btn-outline-secondary {
+  border-radius: 10px;
+  border: 1px solid #888;
+  font-weight: 500;
+  padding: 0.6rem 1.5rem;
+  transition: 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #f0f0f0;
+  border-color: #aaa;
+}
+
+/* === HEADINGS === */
+h4.text-danger {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* === TOAST === */
+.toast {
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+  .update-student-card {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .btn-danger,
+  .btn-outline-secondary {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .d-flex.justify-content-end {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
