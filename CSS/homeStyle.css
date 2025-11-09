@@ -532,4 +532,19 @@ footer table td {
       background: #c9302c;
       transform: scale(1.05);
     }
+
+
+.map-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.map-container iframe {
+  width: 100%;
+  max-width: 600px;
+  border: none;
+  border-radius: 1rem;
+}
+
    
