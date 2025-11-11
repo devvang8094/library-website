@@ -23,9 +23,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   const cardContainer = document.getElementById("studentCards");
   const searchInput = document.getElementById("searchInput");
 
-  // 🧮 Calculate remaining days and status
   function getPlanStatus(expiryDate) {
-    if (!expiryDate) return { text: "-", expired: false, daysLeft: null };
+    if (!expiryDate) return { text: "-", card: "card-active" };
     const today = new Date();
     const expiry = new Date(expiryDate);
     const diffTime = expiry - today;
@@ -36,7 +35,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     return { text: `${days} days left`, color: "days-remaining", card: "card-active" };
   }
 
-  // 🧹 Render Students
   function renderStudents(students) {
     const sorted = [...students].sort((a, b) =>
       a.student_name.localeCompare(b.student_name)
@@ -48,7 +46,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     );
 
     if (filtered.length === 0) {
-      tableBody.innerHTML = `<tr><td colspan="5" class="text-center text-muted">No matching students found.</td></tr>`;
+      tableBody.innerHTML = `<tr><td colspan="6" class="text-center text-muted">No matching students found.</td></tr>`;
       cardContainer.innerHTML = `<p class="text-center text-muted">No matching students found.</p>`;
       return;
     }
@@ -58,13 +56,14 @@ document.addEventListener("DOMContentLoaded", async () => {
       .map((s) => {
         const plan = getPlanStatus(s.plan_expiry);
         return `
-        <tr class="${plan.card.replace('card-', 'table-')}">
-          <td>${s.student_name}</td>
-          <td>${s.student_phone}</td>
-          <td>${s.date_joining ? s.date_joining.split("T")[0] : "-"}</td>
-          <td>${s.plan_expiry ? s.plan_expiry.split("T")[0] : "-"}</td>
-          <td class="${plan.color}">${plan.text}</td>
-        </tr>`;
+          <tr class="${plan.card.replace('card-', 'table-')}">
+            <td>${s.student_name}</td>
+            <td>${s.student_phone}</td>
+            <td>${s.date_joining ? s.date_joining.split("T")[0] : "-"}</td>
+            <td>${s.plan_expiry ? s.plan_expiry.split("T")[0] : "-"}</td>
+            <td class="${plan.color}">${plan.text}</td>
+            <td>${s.total_active_days || 0}</td>
+          </tr>`;
       })
       .join("");
 
@@ -76,13 +75,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         <div class="student-card ${plan.card}">
           <div class="student-name">${s.student_name}</div>
           <div class="student-detail">📞 ${s.student_phone}</div>
-          <div class="student-detail">📅 Joined: ${
-            s.date_joining ? s.date_joining.split("T")[0] : "-"
-          }</div>
-          <div class="student-detail">⏳ Expires: ${
-            s.plan_expiry ? s.plan_expiry.split("T")[0] : "-"
-          }</div>
+          <div class="student-detail">📅 Joined: ${s.date_joining?.split("T")[0] || "-"}</div>
+          <div class="student-detail">⏳ Expires: ${s.plan_expiry?.split("T")[0] || "-"}</div>
           <div class="student-detail ${plan.color}">🕒 ${plan.text}</div>
+          <div class="student-detail fw-bold">📆 Total Active Days: ${s.total_active_days || 0}</div>
         </div>`;
       })
       .join("");
@@ -107,7 +103,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     showToast("Server error, please try again later.");
   }
 
-  // Navbar dynamic links
+  // Navbar links
   document.getElementById(
     "dashboardLink"
   ).href = `../HTML/admin-dashboard.html?admin_id=${admin_id}`;
