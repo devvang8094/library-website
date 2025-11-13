@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   try {
-    const res = await fetch(`http://localhost:5500/students`, {
+    const res = await fetch(`${BASE_URL}/students`, {
       headers: { Authorization: `Bearer ${token}` },
     });
 

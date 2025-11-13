@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", async () => {
   const token = localStorage.getItem("token");
   const admin_id = localStorage.getItem("admin_id");
@@ -19,7 +20,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // Fetch Students
   try {
-    const res = await fetch(`http://localhost:5500/students`, {
+    const res = await fetch(`${BASE_URL}/students`, {
       headers: { Authorization: `Bearer ${token}` },
     });
     const data = await res.json();

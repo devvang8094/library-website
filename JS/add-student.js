@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const token = localStorage.getItem("token");
   const toastEl = document.getElementById("toast");
@@ -118,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Sending student data:", studentData);
 
     try {
-      const response = await fetch(`http://localhost:5500/register-student/${admin_id}`, {
+      const response = await fetch(`${BASE_URL}/${admin_id}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

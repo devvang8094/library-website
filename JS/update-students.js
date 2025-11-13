@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       const res = await fetch(
-        `http://localhost:5500/update-student/${admin_id}/${studentData.student_id}`,
+        `${BASE_URL}/${admin_id}/${studentData.student_id}`,
         {
           method: "PUT",
           headers: {

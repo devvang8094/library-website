@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     startCountdown(sendOtpBtn, "Send OTP", 39);
 
     try {
-      const res = await fetch("http://localhost:5500/forgot-password", {
+      const res = await fetch(`${BASE_URL}/forgot-password`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ admin_phone }),
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // startCountdown(verifyOtpBtn, "Verify OTP", 39);
 
     try {
-      const res = await fetch("http://localhost:5500/verify-otp", {
+      const res = await fetch(`${BASE_URL}/verify-otp`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ admin_phone, otp }),
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!new_password) return showToast("Enter new password", "warning");
 
     try {
-      const res = await fetch("http://localhost:5500/reset-password", {
+      const res = await fetch(`${BASE_URL}/reset-password`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ admin_phone, new_password }),

@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const toastEl = document.getElementById("toast");
   const toastBody = document.getElementById("toast-message");
@@ -45,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     try {
-      const res = await fetch("http://localhost:5500/admin-login", {
+      const res = await fetch( `${BASE_URL}/admin-login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ admin_phone, admin_pass }),

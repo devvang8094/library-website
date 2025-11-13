@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     try {
       const res = await fetch(
-        `http://localhost:5500/delete-student/${selectedStudentId}`,
+        `${BASE_URL}/${selectedStudentId}`,
         {
           method: "DELETE",
           headers: { Authorization: `Bearer ${token}` },
@@ -215,7 +215,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // ✅ Fetch Students Initially
   try {
-    const res = await fetch(`http://localhost:5500/students`, {
+    const res = await fetch(`${BASE_URL}/students`, {
       headers: { Authorization: `Bearer ${token}` },
     });
     const data = await res.json();
