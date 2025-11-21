@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       const res = await fetch(
-        `${BASE_URL}/${admin_id}/${studentData.student_id}`,
+        `${BASE_URL}/update-student/${admin_id}/${studentData.student_id}`,
         {
           method: "PUT",
           headers: {
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
         showToast(data.message || "Failed to update student.", "danger");
       }
     } catch (err) {
-      console.error(err);
+      console.log(err);
       showToast("Server error. Please try again later.", "danger");
     }
   });
