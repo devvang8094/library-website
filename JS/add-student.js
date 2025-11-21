@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Sending student data:", studentData);
 
     try {
-      const response = await fetch(`${BASE_URL}/${admin_id}`, {
+      const response = await fetch(`${BASE_URL}/register-student/${admin_id}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
