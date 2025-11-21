@@ -514,7 +514,7 @@ footer table td {
 
 
 /* --- Mobile Navbar Fix --- */
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   .navbar-custom {
     padding: 0.4rem 1rem !important;
   }
@@ -531,5 +531,15 @@ footer table td {
   .navbar-toggler {
     padding: 0.25rem 0.5rem !important;
   }
+} */
+
+/* Fix: Prevent brand text from pushing navbar toggler down */
+@media (max-width: 480px) {
+  .navbar-brand .brand-text {
+    font-size: 1rem;     /* slightly smaller */
+    max-width: 140px;    /* keeps it on one line */
+    white-space: nowrap; /* prevents wrapping */
+  }
 }
+
 
