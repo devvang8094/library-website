@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     try {
       const res = await fetch(
-        `${BASE_URL}/${selectedStudentId}`,
+        `${BASE_URL}/delete-student/${selectedStudentId}`,
         {
           method: "DELETE",
           headers: { Authorization: `Bearer ${token}` },
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         showToast(data.message || "Failed to delete student", "danger");
       }
     } catch (err) {
-      console.error(err);
+      console.log(err);
       showToast("Server error, please try again later.", "danger");
     }
 
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       localStorage.setItem("updateStudent", JSON.stringify(student));
       window.location.href = `../HTML/update-students.html?student_id=${student.student_id}&admin_id=${admin_id}`;
     } catch (err) {
-      console.error("Error saving student to localStorage:", err);
+      console.log("Error saving student to localStorage:", err);
       showToast("Unable to redirect to update form", "danger");
     }
   }
