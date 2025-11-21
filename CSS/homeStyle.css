@@ -511,3 +511,25 @@ footer table td {
   background: #c9302c;
   transform: scale(1.05);
 }
+
+
+/* --- Mobile Navbar Fix --- */
+@media (max-width: 480px) {
+  .navbar-custom {
+    padding: 0.4rem 1rem !important;
+  }
+
+  .navbar-logo {
+    width: 2rem !important;
+    height: 2rem !important;
+  }
+
+  .brand-text {
+    font-size: 1rem !important;
+  }
+
+  .navbar-toggler {
+    padding: 0.25rem 0.5rem !important;
+  }
+}
+
